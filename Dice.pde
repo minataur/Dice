@@ -1,7 +1,7 @@
 Die suzy;
 void setup()
 {
-	size(500,5000);
+	size(1150,650);
 	noLoop();
 	//int total;
 }
@@ -9,8 +9,8 @@ void draw()
 {
 	int total = 0;
 	background(0);
-	for (int a=0; a<500;a+=10) {
-		for (int s=0; s<4990;s+=10) {
+	for (int a=0; a<1150;a+=10) {
+		for (int s=0; s<650;s+=10) {
 			suzy= new Die(a,s);
 			suzy.roll();
 			suzy.show();
@@ -42,37 +42,38 @@ class Die //models one single dice cube
 	}
 	
 	void show(){
-		fill(0);//dice
+		fill(0);
+		noStroke();//dice
 		rect(myX,myY,10,10);
 		
-		fill(255); //draw ellipses
+		stroke(255); //draw ellipses
 		if (number==1) {
-			ellipse(myX+5,myY+5,2,2);
+			point(myX+5,myY+5);
 		} else if (number==2) {
-			ellipse(myX+3, myY+5,2,2);
-			ellipse(myX+7,myY+5,2,2);
+			point(myX+3, myY+5);
+			point(myX+7,myY+5);
 		} else if (number==3) {
-			ellipse(myX+3,myY+3,2,2);
-			ellipse(myX+7,myY+3,2,2);
-			ellipse(myX+5,myY+7,2,2);
+			point(myX+3,myY+3);
+			point(myX+7,myY+3);
+			point(myX+5,myY+7);
 		} else if (number==4) {
-			ellipse(myX+3, myY+3,2,2);
-			ellipse(myX+7,myY+3,2,2);
-			ellipse(myX+3, myY+7, 2, 2);
-			ellipse(myX+7,myY+7,2,2);
+			point(myX+3, myY+3);
+			point(myX+7,myY+3);
+			point(myX+3, myY+7);
+			point(myX+7,myY+7);
 		} else if (number==5) {
-			ellipse(myX+5,myY+5,2,2);
-			ellipse(myX+3, myY+3,2,2);
-			ellipse(myX+7,myY+3,2,2);
-			ellipse(myX+3, myY+7, 2, 2);
-			ellipse(myX+7,myY+7,2,2);
+			point(myX+5,myY+5);
+			point(myX+3, myY+3);
+			point(myX+7,myY+3);
+			point(myX+3, myY+7);
+			point(myX+7,myY+7);
 		} else {
-			ellipse(myX+2,myY+3,2,2);
-			ellipse(myX+4,myY+3,2,2);
-			ellipse(myX+6,myY+3,2,2);
-			ellipse(myX+2,myY+7,2,2);
-			ellipse(myX+4,myY+7,2,2);
-			ellipse(myX+6,myY+7,2,2);
+			point(myX+2,myY+3);
+			point(myX+4,myY+3);
+			point(myX+6,myY+3);
+			point(myX+2,myY+7);
+			point(myX+4,myY+7);
+			point(myX+6,myY+7);
 		}
 	}
 }
